@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-        <link rel="stylesheet" href="styles.css" />
-        <script src="script.js"></script>
+        <title>Sound PWA</title>
+        <link rel="manifest" href="/manifest.json">
     </head>
+
     <body>
-        <h1 class="title">Hello World</h1>
-        <div id="mainDiv">Hello Div</div>
-        <br />
-        <button onclick="buttonClicked()">Click me</button>
+          <button onclick="playSound()">B u z z e r</button>
+    <audio id="mySound" src="https://studio.code.org/v3/assets/zImw_Zdoozj4cUQ97gqY63ijgtddC2ToFdDrCMackmA/buzzer.mp3?t=1708655526290"></audio>
+
+    <style>
+        body{
+            background: black;
+        }
+        button{
+            background: rgb(185, 0, 0);
+            color: white;
+            border-radius: 133px;
+            height: 215px;
+            width: 215px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: impact;
+            font-size: 30px;
+        }
+    </style>    
+    
+    <script>
+        function playSound() {
+            var sound = document.getElementById("mySound");
+            sound.play();
+        }
+    </script>
     </body>
 </html>
